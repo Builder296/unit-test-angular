@@ -1,27 +1,71 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-describe('AppComponent', () => {
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
-  }));
-  it('should create the app', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
-  }));
-  it(`should have as title 'beautBNK47'`, async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('beautBNK47');
-  }));
-  it('should render title in a h1 tag', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to beautBNK47!');
-  }));
+fdescribe('game', () => {
+  let component: AppComponent;
+  let gameNo: number;
+
+  beforeEach(() => {
+    component = new AppComponent;
+    gameNo = 1;
+  });
+
+  it('gameNo = 1 return should be Win!!', () => {
+    expect(component.gamePlay(gameNo)).toBe('Win');
+  });
+
+  let gameNo2: number;
+  beforeEach(() => {
+    gameNo2 = 2;
+  });
+  it('gameNo = 2 return should be Win!!', () => {
+    expect(component.gamePlay(gameNo2)).toBe('Win');
+  });
+
+  let gameNo3: number;
+  beforeEach(() => {
+    gameNo3 = 3;
+  });
+  it('gameNo = 3 return should be Hello!!', () => {
+    expect(component.gamePlay(gameNo3)).toBe('Hello');
+  });
+
+  let gameNo4: number;
+  beforeEach(() => {
+    gameNo4 = 4;
+  });
+  it('gameNo = 4 return should be บิ้ว!!', () => {
+    expect(component.gamePlay(gameNo4)).toBe('Error');
+  });
+
+  let gameNo5: number;
+  beforeEach(() => {
+    gameNo5 = 5;
+  });
+  it('gameNo = 5 return should be Win!!', () => {
+    expect(component.gamePlay(gameNo5)).toBe('Win');
+  });
+
+  let gameNo6: number;
+  beforeEach(() => {
+    gameNo6 = 6;
+  });
+  it('gameNo = 6 return should be Win!!', () => {
+    expect(component.gamePlay(gameNo6)).toBe('Win');
+  });
+
+  let gameNo7: number;
+  beforeEach(() => {
+    gameNo7 = 7;
+  });
+  it('gameNo = 7 return should be Win!!', () => {
+    expect(component.gamePlay(gameNo7)).toBe('Win');
+  });
+
+  let gameNo33: number;
+  beforeEach(() => {
+    gameNo33 = 33;
+  });
+  it('gameNo = 13 return should be Hello!!', () => {
+    expect(component.gamePlay(gameNo33)).toBe('Hello');
+  });
 });
