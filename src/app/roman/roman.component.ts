@@ -34,9 +34,7 @@ export class RomanComponent {
     } else if (arabic < 40) {
       return this.roman(arabic - (arabic % 10)) + this.roman(arabic % 10);
     } else if (arabic < 50) {
-      return 'XL' + this.roman(arabic - 40);
-    } else if (arabic === 50) {
-      return 'L';
+      return 'XL' + this.roman(arabic % 10);
     } else if (arabic < 90) {
       return 'L' + this.roman(arabic - 50);
     } else if (arabic < 100) {
